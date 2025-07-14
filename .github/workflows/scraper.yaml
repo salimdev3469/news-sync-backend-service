@@ -1,0 +1,31 @@
+name: Run News Sync Scraper
+
+on:
+  schedule:
+    # Her gün UTC 00:00'da (Türkiye saati 03:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # manuel çalıştırmak için
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    env:
+      FIREBASE_CREDENTIALS: ${{ secrets.FIREBASE_CREDENTIALS }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run scraper script
+        run: python scraper.py
