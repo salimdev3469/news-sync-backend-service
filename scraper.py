@@ -1,9 +1,10 @@
+import os
+import json
 import requests
 import xml.etree.ElementTree as ET
 import re
 from bs4 import BeautifulSoup
-import firebase_admin
-from firebase_admin import credentials, firestore
+from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
 import locale
 from dateutil import parser
@@ -14,9 +15,10 @@ try:
 except locale.Error:
     locale.setlocale(locale.LC_TIME, 'tr_TR')
 
-# FIREBASE INIT
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
+# FIREBASE INIT (Environment Variable üzerinden)
+firebase_creds = json.loads(os.environ["FIREBASE_CREDENTIALS"])
+cred = credentials.Certificate(firebase_creds)
+firebase_app = initialize_app(cred)
 db = firestore.client()
 
 # Tüm iller
