@@ -6,14 +6,7 @@ import re
 from bs4 import BeautifulSoup
 from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
-import locale
 from dateutil import parser
-
-# Türkçe locale set edelim
-try:
-    locale.setlocale(locale.LC_TIME, 'tr_TR.UTF-8')
-except locale.Error:
-    locale.setlocale(locale.LC_TIME, 'tr_TR')
 
 # FIREBASE INIT (Environment Variable üzerinden)
 firebase_creds = json.loads(os.environ["FIREBASE_CREDENTIALS"])
