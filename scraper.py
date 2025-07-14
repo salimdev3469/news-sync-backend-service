@@ -218,4 +218,4 @@ def fetch_and_save_trt_news(limit_per_category=5):
 
 
 if __name__ == "__main__":
-    fetch_and_save_trt_news(limit_per_category=1)
+    fetch_and_save_trt_news(limit_per_category=50)
