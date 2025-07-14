@@ -45,11 +45,7 @@ RSS_FEEDS = {
     "Kültür Sanat": "https://www.trthaber.com/kultur_sanat_articles.rss",
     "Bilim Teknoloji": "https://www.trthaber.com/bilim_teknoloji_articles.rss",
     "Güncel": "https://www.trthaber.com/guncel_articles.rss",
-    "Eğitim": "https://www.trthaber.com/egitim_articles.rss",
-    "İnfografik": "https://www.trthaber.com/infografik_articles.rss",
-    "İnteraktif": "https://www.trthaber.com/interaktif_articles.rss",
-    "Özel Haber": "https://www.trthaber.com/ozel_haber_articles.rss",
-    "Dosya Haber": "https://www.trthaber.com/dosya_haber_articles.rss"
+    "Eğitim": "https://www.trthaber.com/egitim_articles.rss"
 }
 
 
