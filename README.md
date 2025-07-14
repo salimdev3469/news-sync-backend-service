@@ -1,1 +1,0 @@
-# news-sync-backend-service
