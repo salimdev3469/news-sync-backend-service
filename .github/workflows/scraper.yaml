@@ -2,10 +2,9 @@ name: Run News Sync Scraper
 
 on:
   schedule:
-    # Her gün Türkiye saatiyle 03:00 → UTC 00:00
     - cron: '0 0 * * *'
-    # Her gün Türkiye saatiyle 15:00 → UTC 12:00
     - cron: '0 12 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch: # manuel çalıştırmak için
 
 jobs:
